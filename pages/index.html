@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- partial:../partials/__head.html -->
+
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Title</title>
+  <link rel="icon" href="/images/ico/favicon.png" />
+
+  <!-- Load META-TAGS for SEO -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="" />
+  <META NAME="Googlebot" CONTENT="index,follow">
+  <META NAME="robots" CONTENT="index,follow">
+  <META NAME="Identifier-URL" CONTENT="http://www.">
+  <META NAME="url" CONTENT="http://www.">
+  <META NAME="Language" CONTENT="PT-BR">
+  <META NAME="content-language" CONTENT="pt-br">
+  <META NAME="distribution" CONTENT="Global">
+  <META NAME="coverage" CONTENT="Worldwide">
+  <META NAME="Author" CONTENT="Sorocabacom.com">
+  <META NAME="Generator" CONTENT="">
+  <meta name="description"
+    content="" />
+
+  <!-- Load META-TAGS for SOCIAL MEDIAS -->
+  <meta property="og:title" content="Title">
+  <meta property="og:description"
+    content="">
+  <meta property="og:image" content="http://www.">
+  <meta property="og:url" content="http://www.">
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="dom.com.br">
+  <meta name="twitter:image:alt" content="Title">
+  <meta property="fb:app_id" content="_app_id" />
+  <meta name="twitter:site" content="@app">
+
+  <!-- Load Font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor JS -->
+  <script src="../vendors/js/vendor.bundle.base.js" defer></script>
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDAAbOGMKsKG-fQAqxRG_psTp2GJsHlsPo&sensor=false&libraries=places" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/carousels.js" defer></script>
+  <script src="../js/como-chegar.js" defer></script>
+  <script src="../js/responsivenav.js" defer></script>
+  <script src="../js/inputmasks.js" defer></script>
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Load FONT AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- partial -->
+</head>
+
+<body class=" wow fadeIn">
+  <main>
+    <section id="como-chegar" class="como-chegar">
+      <div class="row">
+        <div class="col-md-6 px-0 order-last order-md-first">
+          <div id="como-chegar-map" class="como-chegar__map"></div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="como-chegar__form">
+            <div class="como-chegar__form__caption mb-4">
+              <h3 class="inner-title como-chegar__title underlined">Como Chegar?</h3>
+              <p class="inner-desc como-chegar__desc">Digite o seu endereço, escolha a portaria,
+                que lhe mostramos o jeito mais fácil de chegar ao seu sonho.
+              </p>
+            </div>
+            <form id="como-chegar-form" action="">
+              <div class="form-group">
+                <input autoComplete="false" id="como-chegar-adress" class="form-control" placeholder="Endereço" />
+                <span id="como-chegar-error" class="form-error">Oops, não encontramos este endereço.</span>
+              </div>
+
+              <div class="form-group como-chegar__radio">
+                <label class="radio-white" for="radioPortaria1">
+                  <input type="radio" id="radioPortaria1" name="radioPortaria" value="1" checked>
+                  <span class="mask"></span>
+                  <span class="text" for="radioPortaria1"><b>PORTARIA 01:</b> Rodovia João Leme dos Santos, km 1,5
+                    (Continuação da Armando Pannunzio)</span>
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label class="radio-white" for="radioPortaria2">
+                  <input type="radio" id="radioPortaria2" name="radioPortaria" value="2">
+                  <span class="mask"></span>
+                  <span class="text" for="radioPortaria2"><b>PORTARIA 02:</b> Alphaville (Continuação da Av. Gisele
+                    Constantino)</span>
+                </label>
+              </div>
+
+              <button class="btn btn-primary mt-3">
+                Como chegar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <button class="scroll-top"></button>
+
+  <!-- partial -->
+
+</body>
+
+</html>

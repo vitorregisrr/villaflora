@@ -1,0 +1,48 @@
+.btn{
+    font-family: 'MP';
+    padding: 22px 46px;
+    font-size: 14px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    @include transition();
+
+
+    &:active, &:focus, &:hover{
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+    
+}
+
+.btn-transparent{
+    background: none !important;
+    cursor: pointer;
+    
+    &:active, &:focus, &:hover{
+        border: none;
+        outline: none;
+    }
+}
+
+.btn-primary{
+    background-color: $color-primary;
+
+    &:hover{
+        background-color: darken($color-primary, 2);
+        @include scale(1.02);
+    }
+}
+
+.btn-default{
+    min-height: 40px;
+    background-color: $color-primary;
+    color: black;
+
+    &:hover{
+        background-color: #e4dabe;
+        color: black;
+    }
+}

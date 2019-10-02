@@ -1,0 +1,63 @@
+.como-chegar {
+
+    &__title{
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    &__radio{
+        margin-bottom: -6px;
+    }
+
+
+    &__map {
+        height: 100%;
+        width: 100%;
+
+        @media screen and (max-width: $bp-MD) {
+            height: 300px;
+            order: 2;
+        }
+    }
+
+    &__form {
+        background-color: $color-secondary;
+        padding: 85px 34% 90px 63px;
+        
+        @media screen and (max-width: $bp-MD) {
+            padding: 50px 80px 50px 50px;
+            order: 1;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 0;
+            width: 16%;
+            height: 100%;
+            background: $gradient-stripes;
+
+            @media screen and (max-width: $bp-MD){
+                right: -15px;
+            }
+        }
+
+        &__caption {
+            color: #fff;
+            max-width: 350px;
+
+            @media screen and (max-width: $bp-MD) {
+                max-width: 400px;
+            }
+        }
+
+        .form-control {
+            color: $color-primary;
+
+            &::placeholder{
+                color: $color-primary;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.form-control {
+    background-color: rgba(255, 255, 255, 0.815);
+    width: 100%;
+    height: 50px;
+    border-radius: 0;
+    border: none;
+    color: rgb(24, 24, 24);
+    font-size: 14px;
+    padding: 0 15px;
+    @include transition();
+
+    &::placeholder {
+        text-transform: uppercase;
+        font-weight: 400;
+        color: rgba(24, 24, 24, 0.76);
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0.726);
+    }
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+.form-error{
+    color: $color-error;
+    display: block;
+    margin-top: 5px;
+}
