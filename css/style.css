@@ -32,6 +32,10 @@
   color: #e93178 !important;
 }
 
+.color-gray {
+  color: #818181 !important;
+}
+
 .border-light {
   border: 0.5px solid #e4e4e4 !important;
 }
@@ -62,6 +66,12 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media screen and (min-width: 992px) {
+  .w-LG-auto {
+    width: auto !important;
+  }
 }
 
 .bounce {
@@ -321,6 +331,12 @@ b {
   display: inline-block;
   padding: 0 6px;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 340px) {
+  .underlined {
+    padding-bottom: 10px;
+  }
 }
 
 .underlined:after {
@@ -679,6 +695,7 @@ b {
 
 textarea.form-control {
   height: auto;
+  padding: 15px 16px;
 }
 
 .form-error {
@@ -687,10 +704,19 @@ textarea.form-control {
   margin-top: 5px;
 }
 
+.form-group label.error {
+  display: block;
+  color: #f97730;
+  opacity: .8;
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-left: 4px;
+}
+
 .radio-white {
   cursor: pointer;
   display: flex;
-  align-items: flex-start;
   margin-left: 8px;
   padding-top: 10px;
 }
@@ -739,6 +765,26 @@ textarea.form-control {
   font-weight: bold;
 }
 
+.radio-white.dark {
+  align-items: center;
+}
+
+.radio-white.dark .text {
+  color: #818181;
+}
+
+.radio-white.dark .mask {
+  border-color: #818181;
+}
+
+.radio-white.dark input:hover ~ .mask {
+  background-color: #818181;
+}
+
+.radio-white.dark input:checked ~ .mask {
+  background-color: #818181;
+}
+
 .btn {
   font-family: 'MP';
   padding: 22px 46px;
@@ -747,6 +793,7 @@ textarea.form-control {
   text-transform: uppercase;
   color: #fff;
   border: none;
+  border-radius: 1px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -794,10 +841,97 @@ textarea.form-control {
   color: black;
 }
 
-.main-footer {
-  padding: 60px 0 20px;
+.main-footer__brands {
+  height: 140px;
+  width: 100%;
   background-color: #f97730;
-  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-footer__brands {
+    height: auto;
+    padding: 30px 0;
+    padding-bottom: 150px;
+  }
+}
+
+.main-footer__brands-content {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .main-footer__brands-content {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.main-footer__brands-content img {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.main-footer__brands-content img.villa {
+  width: 240px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-footer__brands-content img.villa {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+.main-footer__brands-content img.wolf {
+  margin-top: 24px;
+  width: 90px;
+  margin-right: 20px;
+}
+
+.main-footer__brands-content img.mendes {
+  margin-top: 24px;
+  width: 90px;
+}
+
+.main-footer__splice {
+  position: absolute;
+  right: 0;
+  top: 51%;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50%);
+  align-items: center;
+  background-color: #fdb52e;
+  width: 215px;
+  height: 155px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-footer__splice {
+    transform: translate(-50%, -50%);
+    right: 50%;
+    left: 50%;
+    bottom: -250px;
+    top: unset;
+  }
+}
+
+.main-footer__copyright {
+  padding: 80px 0;
+  font-size: 14px;
+  color: #818181;
+}
+
+@media screen and (max-width: 768px) {
+  .main-footer__copyright {
+    padding: 30px 0;
+    padding-top: 70px;
+    text-align: center;
+  }
 }
 
 .scroll-top {
@@ -867,7 +1001,7 @@ textarea.form-control {
 
 @media screen and (max-width: 768px) {
   .como-chegar__map {
-    height: 300px;
+    height: 500px;
     order: 2;
   }
 }
@@ -902,7 +1036,11 @@ textarea.form-control {
 
 .como-chegar__form__caption {
   color: #fff;
-  max-width: 350px;
+  max-width: 380px;
+}
+
+.como-chegar__form__caption p {
+  font-size: 16px;
 }
 
 @media screen and (max-width: 768px) {
@@ -912,10 +1050,62 @@ textarea.form-control {
 }
 
 .como-chegar__form .form-control {
+  max-width: 500px;
   color: #f97730;
 }
 
 .como-chegar__form .form-control::placeholder {
+  color: #f97730;
+}
+
+.contato__header {
+  padding: 50px 0 40px 0;
+}
+
+.contato__title {
+  color: #606060;
+  padding: 0 50px !important;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .contato__title {
+    padding: 0 20px;
+    font-size: 23px;
+  }
+}
+
+.contato__title:after {
+  bottom: -10px !important;
+}
+
+.contato__content {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+}
+
+.contato__plantao {
+  width: 100%;
+  margin-top: 34px;
+}
+
+.contato__texto-plantao {
+  font-size: 16px;
+}
+
+.contato__texto-plantao h5 {
+  color: #f97730;
+  text-transform: uppercase;
+  font-size: inherit;
+}
+
+.contato__texto-plantao p {
+  color: #818181;
+}
+
+.contato__numero-plantao {
+  font-size: 32px;
   color: #f97730;
 }
 

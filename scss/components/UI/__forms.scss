@@ -26,10 +26,23 @@
 
 textarea.form-control {
     height: auto;
+    padding: 15px 16px;
 }
 
 .form-error{
     color: $color-error;
     display: block;
     margin-top: 5px;
+}
+
+.form-group{
+    label.error{
+        display: block;
+        color: $color-primary;
+        opacity: .8;
+        font-size: 13px;
+        font-weight: 400;
+        padding-top: 5px;
+        padding-left: 4px;
+    }
 }

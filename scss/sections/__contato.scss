@@ -1,0 +1,51 @@
+.contato{
+    &__header{
+        padding: 50px 0 40px 0;
+    }
+
+    &__title{
+        color: #606060;
+        padding: 0 50px !important;
+        font-size: 30px;
+        text-transform: uppercase;
+        
+        @media screen and (max-width: $bp-MD){
+            padding: 0 20px;
+            font-size: 23px;
+        }
+
+        &:after{
+            bottom: -10px !important;
+        }
+    }
+
+
+    &__content{
+        padding: 50px 0;
+        background-color: #f7f7f7;
+    }
+
+    &__plantao{
+        width: 100%;
+        margin-top: 34px;
+    }
+
+    &__texto-plantao{
+        font-size: 16px;
+
+        h5{
+            color: $color-primary;
+            text-transform: uppercase;
+            font-size: inherit;
+        }
+
+        p{
+            color: $color-gray;
+        }
+    }
+
+    &__numero-plantao{
+        font-size: 32px;
+        color: $color-primary;
+    }
+}

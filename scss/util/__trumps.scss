@@ -23,6 +23,10 @@
     color: $color-secondary !important;
 }
 
+.color-gray {
+    color: $color-gray !important;
+}
+
 .border-light {
     border: .5px solid rgb(228, 228, 228) !important;
 }
@@ -53,4 +57,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.w-LG-auto{
+    @media screen and (min-width: $bp-LG){
+        width: auto !important;
+    }
 }

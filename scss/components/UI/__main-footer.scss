@@ -1,5 +1,84 @@
 .main-footer {
-    padding: 60px 0 20px;
-    background-color: $color-primary;
-    letter-spacing: 1px;
+    &__brands{
+        height: 140px;
+        width: 100%;
+        background-color: $color-primary;
+
+        @media screen and (max-width: $bp-MD){
+            height: auto;
+            padding: 30px 0;
+            padding-bottom: 150px;
+        }
+    }
+
+    &__brands-content{
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+
+        @media screen and (max-width: $bp-MD){
+            flex-direction: column;
+            width: 100%;
+        }
+
+        img{
+            flex-grow: 0;
+            flex-shrink: 0;
+
+           &.villa{
+                width: 240px;
+                margin-right: 20px;
+
+                @media screen and (max-width: $bp-MD){
+                    display: block;
+                    margin-right: 0;
+                }
+            }
+
+           &.wolf{
+                margin-top: 24px;
+                width: 90px;
+                margin-right: 20px;
+            }
+            
+          &.mendes{
+                margin-top: 24px;
+                width: 90px;
+            }
+        }
+    }
+
+    &__splice{
+        position: absolute;
+        right: 0;
+        top: 51%;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-50%);
+        align-items: center;
+        background-color: $color-yellow;
+        width: 215px;
+        height: 155px;
+
+        @media screen and (max-width: $bp-MD){
+            transform: translate(-50%, -50%);
+            right: 50%;
+            left: 50%;
+            bottom: -250px;
+            top: unset;
+        }
+    }
+
+    &__copyright{
+        padding: 80px 0;
+        font-size: 14px;
+        color: $color-gray;
+
+        @media screen and (max-width: $bp-MD){
+            padding: 30px 0;
+            padding-top: 70px;
+            text-align: center;
+        }
+    }
 }

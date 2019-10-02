@@ -81,7 +81,7 @@
                 travelMode: google.maps.DirectionsTravelMode.DRIVING
             };
 
-        } else if($('input[name=radioPortaria]:checked').val() === "2") {
+        } else if ($('input[name=radioPortaria]:checked').val() === "2") {
             request = {
                 origin: $("#como-chegar-adress").val(),
                 destination: portaria2.position,
@@ -94,6 +94,11 @@
                 directionsDisplay.setDirections(response);
                 directionsDisplay.setMap(map);
                 $('#como-chegar-error').fadeOut();
+
+                $("html, body").animate({
+                    scrollTop: $('#como-chegar-map').offset().top + 200
+                }, 700);
+
             } else {
                 $('#como-chegar-error').fadeIn();
             }

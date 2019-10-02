@@ -4,7 +4,7 @@
 <head>
   <!-- partial:../partials/__head.html -->
 
-    <meta charset="UTF-8">
+                      <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Title</title>
@@ -51,6 +51,7 @@
   <script src="../js/carousels.js" defer></script>
   <script src="../js/como-chegar.js" defer></script>
   <script src="../js/responsivenav.js" defer></script>
+  <script src="../js/form-validation.js" defer></script>
   <script src="../js/inputmasks.js" defer></script>
 
   <!-- Vendor CSS -->
@@ -64,7 +65,7 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- partial -->
+                    <!-- partial -->
 </head>
 
 <body class=" wow fadeIn">
@@ -72,23 +73,23 @@
     <section id="como-chegar" class="como-chegar">
       <div class="row">
         <div class="col-md-6 px-0 order-last order-md-first">
-          <div id="como-chegar-map" class="como-chegar__map"></div>
+          <div id="como-chegar-map" class="como-chegar__map wow fadeInLeft"></div>
         </div>
         <div class="col-md-6 px-0">
-          <div class="como-chegar__form">
-            <div class="como-chegar__form__caption mb-4">
-              <h3 class="inner-title como-chegar__title underlined">Como Chegar?</h3>
-              <p class="inner-desc como-chegar__desc">Digite o seu endereço, escolha a portaria,
+          <div class="como-chegar__form wow fadeInRight">
+            <div class="como-chegar__form__caption mb-4 wow fadeInUp">
+              <h3 class="inner-title como-chegar__title underlined ">Como Chegar?</h3>
+              <p class="inner-desc como-chegar__desc ">Digite o seu endereço, escolha a portaria,
                 que lhe mostramos o jeito mais fácil de chegar ao seu sonho.
               </p>
             </div>
             <form id="como-chegar-form" action="">
-              <div class="form-group">
+              <div class="form-group  wow fadeInUp">
                 <input autoComplete="false" id="como-chegar-adress" class="form-control" placeholder="Endereço" />
                 <span id="como-chegar-error" class="form-error">Oops, não encontramos este endereço.</span>
               </div>
 
-              <div class="form-group como-chegar__radio">
+              <div class="form-group como-chegar__radio  wow fadeInUp">
                 <label class="radio-white" for="radioPortaria1">
                   <input type="radio" id="radioPortaria1" name="radioPortaria" value="1" checked>
                   <span class="mask"></span>
@@ -97,7 +98,7 @@
                 </label>
               </div>
 
-              <div class="form-group">
+              <div class="form-group  wow fadeInUp">
                 <label class="radio-white" for="radioPortaria2">
                   <input type="radio" id="radioPortaria2" name="radioPortaria" value="2">
                   <span class="mask"></span>
@@ -106,7 +107,7 @@
                 </label>
               </div>
 
-              <button class="btn btn-primary mt-3">
+              <button class="btn btn-primary mt-3  wow fadeInUp">
                 Como chegar
               </button>
             </form>
@@ -114,6 +115,135 @@
         </div>
       </div>
     </section>
+
+    <section id="contato" class="contato">
+      <div class="contato__header">
+        <div class="container d-flex justify-content-center">
+          <h3 class="contato__title underlined  wow fadeInUp">Contato</h3>
+        </div>
+      </div>
+
+      <div class="contato__content  wow fadeIn">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-11 col-lg-9 col-xl-8">
+              <form action="" id="contact-form">
+
+                <div class="form-group  wow fadeInUp">
+                  <input class="form-control" type="text" placeholder="Nome" name="nome">
+                </div>
+
+                <div class="form-group  wow fadeInUp">
+                  <input class="form-control" type="text" placeholder="E-mail" name="email">
+                </div>
+
+                <div class="form-group  wow fadeInUp">
+                  <input class="form-control mask-cellphone" type="text" placeholder="Telefone" name="telefone">
+                </div>
+
+                <div class="form-group  wow fadeInUp">
+                  <textarea class="form-control" type="text" placeholder="Mensagem" name="mensagem" rows="7"></textarea>
+                </div>
+
+                <div class="row  wow fadeInUp d-flex align-items-center">
+                  <div
+                    class="col-lg-9 mb-3 mb-lg-0 text-uppercase d-flex flex-column align-items-center flex-lg-row form-group">
+                    <span class="color-gray">
+                      Receber contato via
+                    </span>
+                    <div>
+                      <div class="d-inline-block ml-4 mr-2">
+                        <label class="radio-white dark" for="radioContato1">
+                          <input type="radio" id="radioContato1" name="tipoContato" value="whataspp">
+                          <span class="mask"></span>
+                          <span class="text" for="radioContato1">Whatsapp </span>
+                        </label>
+                      </div>
+
+                      <div class="d-inline-block mr-2">
+                        <label class="radio-white dark" for="radioContato2">
+                          <input type="radio" id="radioContato2" name="tipoContato" value="email">
+                          <span class="mask"></span>
+                          <span class="text" for="radioContato2">Email</span>
+                        </label>
+                      </div>
+
+                      <div class="d-inline-block">
+                        <label class="radio-white dark" for="radioContato3">
+                          <input type="radio" id="radioContato3" name="tipoContato" value="telefone">
+                          <span class="mask"></span>
+                          <span class="text" for="radioContato3">Telefone</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 d-flex justify-content-end">
+                    <button class="btn btn-primary w-100">Enviar</button>
+                  </div>
+
+                  <div class="contato__plantao">
+                    <div class="container">
+                      <div class="row justify-content-center wow fadeInUp">
+
+                        <div
+                          class="col-lg-8 d-flex flex-column justify-content-center  justify-content-lg-start contato__texto-plantao text-center text-lg-left">
+                          <h5>Plantão de vendas no local</h5>
+                          <p class="mb-2 mb-lg-0">
+                            Rod. João Leme dos Santos, km 1,5 - Votorantim/SP <br />
+                            (continuação da av. armando pannunzio)
+                          </p>
+                        </div>
+
+                        <div
+                          class="contato__numero-plantao col-lg-4 d-flex justify-content-center  justify-content-lg-end align-items-end">
+                          (15) 3243.8478
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- partial:../partials/__footer.html -->
+    <footer class="main-footer">
+    <div class="main-footer__brands  wow fadeInUp">
+        <div class="container position-relative h-100">
+            <div class="main-footer__brands-content">
+                <a href="#">
+                    <img class="villa" src="../images/brands/villa-white.png" alt="Logo Villa Flora em branco"></a>
+                <div>
+                    <a href="#">
+                        <img class="wolf" src="../images/brands/wolf.png" alt="Logo Wolf em branco">
+                    </a>
+                    <a href="#">
+                        <img class="mendes" src="../images/brands/mendes.png" alt="Logo Mendes Ortega em branco">
+                    </a>
+                </div>
+            </div>
+            <div class="main-footer__splice">
+                <img src="../images/brands/splice.png" alt="Logo Splice em laranja">
+            </div>
+        </div>
+    </div>
+
+    <div class="main-footer__copyright  wow fadeIn">
+        <div class="container">
+            <p class="wow fadeInUp">Incorporação e construção: ANDIRA EMPREENDIMENTOS IMOBILIÁRIOS LTDA. Condomínio dos Antúrios: Projeto
+                aprovado pela Prefeitura Municipal de Votorantim sob o alvará nº 173/2017, em 30/03/2017. Incorporação
+                imobiliária registrada sob o n.º R. 3, datado de 01 de junho de 2017, da matrícula nº 15.072, do Oficial
+                de Registro de Imóveis do Município de Votorantim – SP. Móveis, equipamentos e decorações são sugestões
+                e não fazem parte do projeto a ser entregue pela Incorporadora. Consulte unidades/modelos disponíveis.
+                Atendimento das 09h às 18h, todos os dias da semana. Vendas: WOLF IMÓVEIS CRECI 20.226J / MENDES ORTEGA
+                CRECI 9.835J.</p>
+        </div>
+    </div>
+</footer>
+    <!-- partial -->
   </main>
   <button class="scroll-top"></button>
 
