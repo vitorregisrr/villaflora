@@ -96,7 +96,7 @@
                 $('#como-chegar-error').fadeOut();
 
                 $("html, body").animate({
-                    scrollTop: $('#como-chegar-map').offset().top + 200
+                    scrollTop: $('#como-chegar-map').offset().top - 50
                 }, 700);
 
             } else {

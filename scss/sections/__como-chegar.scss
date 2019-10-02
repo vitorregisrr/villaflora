@@ -49,9 +49,21 @@
 
             p{
                 font-size: 16px;
+
+                @media screen and (max-width: $bp-SM){
+                    font-size: 14px;
+                }
+            }
+
+            
+            h3{
+
+                @media screen and (max-width: $bp-SM){
+                    font-size: 24px;
+                }
             }
             
-            @media screen and (max-width: $bp-MD) {
+            @media screen and (max-width: $bp-SM) {
                 max-width: 400px;
             }
         }
@@ -62,6 +74,14 @@
             
             &::placeholder{
                 color: $color-primary;
+            }
+        }
+
+        .radio-white{
+            font-size: 13px;
+
+            @media screen and (max-width: $bp-MD){
+                font-size: 12px;
             }
         }
     }
