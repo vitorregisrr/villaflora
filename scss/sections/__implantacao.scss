@@ -1,0 +1,185 @@
+.implantacao {
+    overflow: hidden;
+    max-width: 1600px;
+    max-height: 100vh;
+    margin: 0 auto;
+
+    &__header {
+        position: relative;
+        z-index: 2;
+        padding: 40px 0 10px 0;
+        margin-bottom: -40px;
+
+        .inner-title {
+            padding: 0 10px !important;
+            color: #949494;
+
+            &:after {
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    &__content {
+        z-index: 1;
+        cursor: move;
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+
+        &:active {
+            cursor: grabbing;
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+        }
+    }
+
+    &__scene {
+        width: 1600px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        cursor: pointer;
+        position: absolute;
+        z-index: 4;
+        animation: float 4s infinite;
+        @include transition();
+
+        &-icon {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+
+            &:before{
+                content: '';
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                z-index: -1;
+                transform: translate(-50%, -50%);
+                width: 80px;
+                height: 120px;
+                background-image: url(../images/ico/implantacao-icon.png);
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                z-index: 3;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+            &.checkin{
+                width: 37px;
+                height: 37px;
+                background-color: #27c17b;
+
+                &:before{
+                    width: 50px;
+                    height: 50px;
+                    background: none;
+                    background-color: #ffffff86;
+                    top: 50%;
+                    border-radius: 50%;
+                }
+
+                &:after {
+                    background-size: 70%;
+                    background-image: url(../images/ico/checkin.png);
+                }
+            }
+            
+            &.marker {
+                background-color: #e93178;
+                
+                &:after {
+                    background-size: 40%;
+                    background-image: url(../images/ico/marker.png);
+                }
+            }
+            
+            &.car {
+                background-color: #f97730;
+                &:after {
+                    background-image: url(../images/ico/car.png);
+                }
+            }
+            
+            &.folhas {
+                background-color: #f97730;
+                &:after {
+                    background-image: url(../images/ico/folhas.png);
+                }
+            }
+            
+            &.house {
+                background-color: #f97730;
+                &:after {
+                    background-size: 70%;
+                    background-image: url(../images/ico/house-2.png);
+                }
+            }
+        }
+
+        &-box {
+            position: absolute;
+            right: 30px;
+            top: 1px;
+            border-radius: 0 60px 60px 0;
+            transform: translateX(100%);
+
+            padding: 7px 0;
+            opacity: 0;
+            max-width: 1px;
+            overflow: hidden;
+            transition: max-width 1s ease-in-out, opacity 0.2s ease-in, padding 0.7s;
+
+            color: #fff;
+            font-size: 10px;
+            white-space: nowrap;
+            text-transform: uppercase;
+
+            span {
+                display: block;
+                font-size: 21px;
+                font-weight: 900;
+                margin-top: -3px;
+                text-transform: none;
+            }
+
+            &.orange {
+                background-color: #f97730;
+            }
+
+            &.pink {
+                background-color: #e93178;
+            }
+
+            &.green {
+                background-color: #27c17b;
+                top: 3px;
+            }
+        }
+
+        &:hover {
+            @include scale(1.05);
+
+            .implantacao__item-box {
+                padding: 7px 25px 7px 30px;
+                opacity: 1;
+                max-width: 1000px;
+            }
+        }
+    }
+}

@@ -1,10 +1,15 @@
 .como-chegar {
+    overflow: hidden;
 
     &__title{
         font-size: 30px;
         font-weight: 400;
     }
 
+    .inner-title{
+        padding: 0 10px !important;
+    }
+    
     &__radio{
         margin-bottom: -6px;
     }
