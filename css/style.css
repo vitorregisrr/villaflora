@@ -261,6 +261,7 @@ button:focus {
 }
 
 .inner-title {
+  color: #949494;
   padding: 0 50px !important;
   font-size: 30px;
   text-transform: uppercase;
@@ -1065,6 +1066,10 @@ textarea.form-control {
   padding: 50px 0 40px 0;
 }
 
+.contato__header .inner-title {
+  color: #606060;
+}
+
 .contato__content {
   padding: 50px 0;
   background-color: #f7f7f7;
@@ -1207,6 +1212,14 @@ textarea.form-control {
   object-fit: cover;
 }
 
+.imoveis__header {
+  padding: 50px 0;
+}
+
+.imoveis__header .inner-title {
+  color: #949494;
+}
+
 .diferenciais {
   position: relative;
   padding: 80px 0;
@@ -1292,6 +1305,11 @@ textarea.form-control {
   transform: skewX(19deg) translateX(-10%);
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .diferenciais__slide-img img.active {

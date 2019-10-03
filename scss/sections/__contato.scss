@@ -1,6 +1,10 @@
 .contato{
     &__header{
         padding: 50px 0 40px 0;
+
+        .inner-title{
+            color: #606060;
+        }
     }
 
     &__content{

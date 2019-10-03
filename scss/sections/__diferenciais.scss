@@ -70,6 +70,7 @@
                 transform: skewX(19deg) translateX(-10%);
                 opacity: 0;
                 visibility: hidden;
+                @include transition();
 
                 &.active{
                     opacity: 1;
