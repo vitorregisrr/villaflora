@@ -1297,6 +1297,7 @@ textarea.form-control {
 
 @media screen and (max-width: 992px) {
   .implantacao__item {
+    display: flex;
     position: relative;
     top: unset !important;
     left: unset !important;
@@ -1416,12 +1417,15 @@ textarea.form-control {
 
 @media screen and (max-width: 992px) {
   .implantacao__item-box {
+    position: relative;
+    right: unset;
+    top: unset;
+    transform: none;
     width: 78%;
     max-width: unset;
     opacity: 1;
     padding: 7px 25px 7px 30px;
-    right: 89%;
-    top: 1.5px;
+    margin-left: -25px;
   }
 }
 
@@ -1455,7 +1459,7 @@ textarea.form-control {
 }
 
 .implantacao__item:hover .implantacao__item-box {
-  padding: 7px 25px 7px 30px;
+  padding: 7px 25px 7px 40px;
   opacity: 1;
   max-width: 1000px;
 }
