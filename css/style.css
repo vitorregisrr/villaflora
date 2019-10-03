@@ -303,7 +303,7 @@ button:focus {
   bottom: -2px;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 1.5px;
   background-color: #fdb52e;
 }
 
@@ -969,6 +969,7 @@ textarea.form-control {
 }
 
 .como-chegar .inner-title {
+  color: #fff;
   padding: 0 10px !important;
 }
 
@@ -1212,12 +1213,232 @@ textarea.form-control {
   object-fit: cover;
 }
 
+.imoveis {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 .imoveis__header {
   padding: 50px 0;
 }
 
 .imoveis__header .inner-title {
   color: #949494;
+  padding: 0;
+  text-align: center;
+}
+
+.imoveis__header .inner-title:after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .imoveis__header .inner-title:after {
+    width: 70%;
+  }
+}
+
+.imoveis__tabs {
+  position: relative;
+}
+
+.imoveis__tabs-header {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 2px 2px 0 0;
+  background-color: #73807f;
+  width: 90%;
+  height: 40px;
+  top: -28px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .imoveis__tabs-header {
+    animation-name: none !important;
+    position: relative;
+    margin-left: 0;
+    transform: translateY(40px);
+  }
+}
+
+.imoveis__tabs-header:after {
+  content: '';
+  width: 20px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  left: -5px;
+  top: -10px;
+  transform: rotate(30deg);
+}
+
+.imoveis__tabs-header:before {
+  content: '';
+  width: 20px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  right: -5px;
+  top: -10px;
+  transform: rotate(-30deg);
+}
+
+.imoveis__tabs-header.obras {
+  background-color: #617674;
+  width: 70%;
+  margin-left: 20%;
+}
+
+@media screen and (max-width: 992px) {
+  .imoveis__tabs-header.obras {
+    margin-top: -20px;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .imoveis__tabs-header.prontos {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10px;
+  }
+}
+
+.imoveis__tabs-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 10px 25px 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.imoveis__tabs-item:hover .caption {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+.imoveis__tabs-item .caption {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .imoveis__tabs-item .caption {
+    margin-right: 20px;
+  }
+}
+
+.imoveis__tabs-item.purple {
+  background-color: #743e7f;
+}
+
+.imoveis__tabs-item.yellow {
+  background-color: #fdb52e;
+}
+
+.imoveis__tabs-item.orange {
+  background-color: #f97730;
+}
+
+.imoveis__tabs-item.pink {
+  background-color: #e93178;
+}
+
+.imoveis__tabs-item .nome {
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+.imoveis__tabs-item .tamanho {
+  font-weight: bold;
+  font-size: 28px;
+  margin-top: -7px;
+  margin-bottom: 30px;
+}
+
+.imoveis__tabs-item small {
+  font-size: 13px;
+}
+
+.imoveis__tabs-item .more {
+  position: relative;
+  display: block;
+  text-align: right;
+  text-transform: lowercase;
+  font-size: 14px;
+  padding-right: 50px;
+  margin-left: 140px;
+}
+
+.imoveis__tabs-item .more:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../images/ico/arrow-down.png);
+}
+
+@media screen and (max-width: 992px) {
+  .imoveis__tabs-item .more:after {
+    right: 30px;
+  }
+}
+
+.imoveis .obras-wrapper {
+  position: relative;
+  background-color: #f97730;
+  overflow: visible;
+}
+
+@media screen and (max-width: 992px) {
+  .imoveis .obras-wrapper {
+    background-color: transparent;
+  }
+}
+
+.imoveis .obras-wrapper:after {
+  content: '';
+}
+
+.imoveis .prontos-wrapper {
+  position: relative;
+  background-color: #e93178;
+  overflow: visible;
+}
+
+@media screen and (max-width: 992px) {
+  .imoveis .prontos-wrapper {
+    background-color: transparent;
+  }
 }
 
 .diferenciais {
