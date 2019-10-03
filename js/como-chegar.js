@@ -10,7 +10,6 @@
     // Inicia o auto complete para o INPUT
     var input = document.getElementById('como-chegar-adress');
     var options = {
-        types: ['establishment'],
         componentRestrictions: {
             country: "br"
         }
