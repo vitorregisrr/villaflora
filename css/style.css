@@ -1203,14 +1203,6 @@ textarea.form-control {
   object-fit: cover;
 }
 
-.implantacao__item-icon:before {
-  z-index: -1;
-}
-
-.implantacao__item-icon:after {
-  z-index: 4;
-}
-
 .implantacao {
   overflow: hidden;
   max-width: 1600px;
