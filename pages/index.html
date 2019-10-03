@@ -4,7 +4,7 @@
 <head>
   <!-- partial:../partials/__head.html -->
 
-      <meta charset="UTF-8">
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Villa Flora</title>
@@ -52,6 +52,7 @@
   <script src="../js/carousels.js" defer></script>
   <script src="../js/como-chegar.js" defer></script>
   <script src="../js/implantacao.js" defer></script>
+  <script src="../js/diferenciais.js" defer></script>
   <script src="../js/galeria.js" defer></script>
   <script src="../js/responsivenav.js" defer></script>
   <script src="../js/form-validation.js" defer></script>
@@ -68,14 +69,154 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- partial -->
+  <!-- partial -->
 </head>
 
 <body class=" wow fadeIn">
   <main>
 
     <section id="diferenciais" class="diferenciais">
+      <div class="container">
+        <div class="row justify-content-center align-items-center flex-column flex-md-row">
 
+          <button class="diferenciais__item wow fadeInLeft btn-transparent toggler" data-toggle="#slide-seguranca">
+            <h4 class="diferenciais__item-title">Segurança</h4>
+            <div class="diferenciais__item-circle" style="background-image: url('../images/galeria/main.png')">
+              <div class="diferenciais__item-desc">
+                Estar seguro é muito mais que simplesmente estar protegido
+              </div>
+            </div>
+          </button>
+
+          <button class="diferenciais__item wow fadeInUp btn-transparent toggler" data-toggle="#slide-lazer">
+            <h4 class="diferenciais__item-title">Lazer</h4>
+            <div class="diferenciais__item-circle" style="background-image: url('../images/backgrounds/lazer.png')">
+              <div class="diferenciais__item-desc">
+                Estar seguro é muito mais que simplesmente estar protegido
+              </div>
+            </div>
+          </button>
+
+          <button class="diferenciais__item wow fadeInRight btn-transparent toggler" data-toggle="#slide-localizacao">
+            <h4 class="diferenciais__item-title">Localização</h4>
+            <div class="diferenciais__item-circle"
+              style="background-image: url('../images/backgrounds/localizacao.png')">
+              <div class="diferenciais__item-desc">
+                Estar seguro é muito mais que simplesmente estar protegido
+              </div>
+            </div>
+          </button>
+
+        </div>
+      </div>
+
+      <div id="slide-seguranca" class="diferenciais__slide">
+        <div class="row w-100">
+          <div class="col-lg-5 px-0">
+
+            <div class="diferenciais__slide-caption h-100">
+              <div>
+                <h4 class="diferenciais__slide-title">
+                  Segurança
+                </h4>
+                <p>
+                  - 2 portarias com controle de entrada <br />
+                  - Sistema de patrulha motorizada 24h* <br />
+                  - Câmeras e monitores* <br />
+                  <small class="d-block mt-3 font-italic">
+                    * Serviços que podem ser instalados de acordo a Associação de Moradores do bairro.
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 px-0 h-100">
+            <div class="diferenciais__slide-img">
+              <img src="../images/backgrounds/seguranca-1.png" alt="">
+            </div>
+          </div>
+
+          <div class="diferenciais__slide-actions">
+            <button class="diferenciais__slide-actions-item closee toggler" data-toggle="#slide-seguranca"></button>
+            <button class="diferenciais__slide-actions-item right"></button>
+            <button class="diferenciais__slide-actions-item left"></button>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="slide-lazer" class="diferenciais__slide">
+        <div class="row w-100">
+          <div class="col-lg-5 px-0">
+
+            <div class="diferenciais__slide-caption h-100">
+              <div>
+                <h4 class="diferenciais__slide-title">
+                  Lazer
+                </h4>
+                <p>
+                  - 2 portarias com controle de entrada <br />
+                  - Sistema de patrulha motorizada 24h* <br />
+                  - Câmeras e monitores* <br />
+                  <small class="d-block mt-3 font-italic">
+                    * Serviços que podem ser instalados de acordo a Associação de Moradores do bairro.
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 px-0 h-100">
+            <div class="diferenciais__slide-img">
+              <img src="../images/backgrounds/seguranca-1.png" alt="">
+            </div>
+          </div>
+
+          <div class="diferenciais__slide-actions">
+            <button class="diferenciais__slide-actions-item closee toggler" data-toggle="#slide-lazer"></button>
+            <button class="diferenciais__slide-actions-item right"></button>
+            <button class="diferenciais__slide-actions-item left"></button>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="slide-localizacao" class="diferenciais__slide">
+        <div class="row w-100">
+          <div class="col-lg-5 px-0">
+
+            <div class="diferenciais__slide-caption h-100">
+              <div>
+                <h4 class="diferenciais__slide-title">
+                  Localização
+                </h4>
+                <p>
+                  - 2 portarias com controle de entrada <br />
+                  - Sistema de patrulha motorizada 24h* <br />
+                  - Câmeras e monitores* <br />
+                  <small class="d-block mt-3 font-italic">
+                    * Serviços que podem ser instalados de acordo a Associação de Moradores do bairro.
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 px-0 h-100">
+            <div class="diferenciais__slide-img">
+              <img src="../images/backgrounds/seguranca-1.png" alt="">
+            </div>
+          </div>
+
+          <div class="diferenciais__slide-actions">
+            <button class="diferenciais__slide-actions-item closee toggler" data-toggle="#slide-localizacao"></button>
+            <button class="diferenciais__slide-actions-item right"></button>
+            <button class="diferenciais__slide-actions-item left"></button>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <section id="galeria" class="galeria">
@@ -87,7 +228,8 @@
         </div>
 
         <div class="col-lg-4 galeria__list-wrapper pl-0">
-          <button type="button" class="galeria__list-item wow fadeInRight active" data-open="../images/galeria/main.png">
+          <button type="button" class="galeria__list-item wow fadeInRight active"
+            data-open="../images/galeria/main.png">
             <img class="lazy" data-src="../images/galeria/1.png" alt="">
           </button>
 
@@ -140,11 +282,11 @@
         <img src="../images/backgrounds/mapa-implantacao.png" class="implantacao__scene">
 
         <div class="implantacao__item checkin" style="top: 590px; left: 685px">
-            <div class="implantacao__item-icon checkin"></div>
-            <div class="implantacao__item-box green">
-              div 9
-            </div>
+          <div class="implantacao__item-icon checkin"></div>
+          <div class="implantacao__item-box green">
+            div 9
           </div>
+        </div>
 
         <div class="implantacao__item wow fadeInUp" style="top: 600px; left: 485px">
           <div class="implantacao__item-icon marker"></div>
@@ -365,20 +507,20 @@
         <div class="container position-relative h-100">
             <div class="main-footer__brands-content">
                 <a href="#">
-                    <img class="villa lazy" data-src="../images/brands/villa-white.png" alt="Logo Villa Flora em branco">
+                    <img class="villa" src="../images/brands/villa-white.png" alt="Logo Villa Flora em branco">
                 </a>
                 <div>
                     <a href="#">
-                        <img class="wolf lazy" data-src="../images/brands/wolf.png" alt="Logo Wolf em branco">
+                        <img class="wolf" src="../images/brands/wolf.png" alt="Logo Wolf em branco">
                     </a>
                     <a href="#">
-                        <img class="mendes lazy" data-src="../images/brands/mendes.png" alt="Logo Mendes Ortega em branco">
+                        <img class="mendes" src="../images/brands/mendes.png" alt="Logo Mendes Ortega em branco">
                     </a>
                 </div>
             </div>
             <div class="main-footer__splice">
                 <a href="#">
-                    <img class="lazy" data-src="../images/brands/splice.png" alt="Logo Splice em laranja">
+                    <img src="../images/brands/splice.png" alt="Logo Splice em laranja">
                 </a>
             </div>
         </div>

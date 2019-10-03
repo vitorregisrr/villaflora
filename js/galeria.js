@@ -9,7 +9,7 @@
         $(this).addClass('active');
 
         $("html, body").animate({
-            scrollTop: mainImage.offset().top - 120
+            scrollTop: mainImage.offset().top - 30
         }, 700);
 
         mainImage.fadeOut(300, function(){
