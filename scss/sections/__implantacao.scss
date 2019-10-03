@@ -1,14 +1,36 @@
+.implantacao__item-icon:before {
+    z-index: -1;
+}
+
+.implantacao__item-icon:after {
+    z-index: 4;
+}
+
 .implantacao {
     overflow: hidden;
     max-width: 1600px;
     max-height: 100vh;
     margin: 0 auto;
 
+    @media screen and (max-width: $bp-LG) {
+        transform: none !important;
+        background-image: url(../images/galeria/main.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center right;
+        max-height: unset;
+    }
+
     &__header {
         position: relative;
         z-index: 2;
         padding: 40px 0 10px 0;
         margin-bottom: -40px;
+
+        @media screen and (max-width: $bp-LG) {
+            margin-bottom: 0;
+            padding: 20px 0;
+        }
 
         .inner-title {
             padding: 0 10px !important;
@@ -17,26 +39,34 @@
             &:after {
                 background-color: $color-primary;
             }
+
+            @media screen and (max-width: $bp-MD) {
+                display: none;
+            }
         }
     }
 
     &__content {
         z-index: 1;
         cursor: move;
-        cursor: grab;
-        cursor: -moz-grab;
-        cursor: -webkit-grab;
 
         &:active {
             cursor: grabbing;
-            cursor: -moz-grabbing;
-            cursor: -webkit-grabbing;
+        }
+
+        @media screen and (max-width: $bp-LG) {
+            transform: none !important;
+            padding: 10px 20px 10px 30px;
         }
     }
 
     &__scene {
         width: 1600px;
         margin: 0 auto;
+
+        @media screen and (max-width: $bp-LG) {
+            display: none;
+        }
     }
 
     &__item {
@@ -46,13 +76,26 @@
         animation: float 4s infinite;
         @include transition();
 
+        @media screen and (max-width: $bp-LG) {
+            position: relative;
+            top: unset !important;
+            left: unset !important;
+            margin-bottom: 40px;
+            animation: none;
+
+
+            &.checkin {
+                display: none;
+            }
+        }
+
         &-icon {
             position: relative;
             width: 60px;
             height: 60px;
             border-radius: 50%;
 
-            &:before{
+            &:before {
                 content: '';
                 position: absolute;
                 top: 60%;
@@ -80,12 +123,12 @@
                 background-repeat: no-repeat;
             }
 
-            &.checkin{
+            &.checkin {
                 width: 37px;
                 height: 37px;
                 background-color: #27c17b;
 
-                &:before{
+                &:before {
                     width: 50px;
                     height: 50px;
                     background: none;
@@ -99,32 +142,35 @@
                     background-image: url(../images/ico/checkin.png);
                 }
             }
-            
+
             &.marker {
                 background-color: #e93178;
-                
+
                 &:after {
                     background-size: 40%;
                     background-image: url(../images/ico/marker.png);
                 }
             }
-            
+
             &.car {
                 background-color: #f97730;
+
                 &:after {
                     background-image: url(../images/ico/car.png);
                 }
             }
-            
+
             &.folhas {
                 background-color: #f97730;
+
                 &:after {
                     background-image: url(../images/ico/folhas.png);
                 }
             }
-            
+
             &.house {
                 background-color: #f97730;
+
                 &:after {
                     background-size: 70%;
                     background-image: url(../images/ico/house-2.png);
@@ -150,6 +196,16 @@
             white-space: nowrap;
             text-transform: uppercase;
 
+            @media screen and (max-width: $bp-LG) {
+                width: 78%;
+                max-width: unset;
+                opacity: 1;
+                padding: 7px 25px 7px 30px;
+                right: 89%;
+                top: 1.5px;
+            }
+
+
             span {
                 display: block;
                 font-size: 21px;
@@ -174,6 +230,10 @@
 
         &:hover {
             @include scale(1.05);
+
+            @media screen and (max-width: $bp-LG) {
+                transform: scale(.9);
+            }
 
             .implantacao__item-box {
                 padding: 7px 25px 7px 30px;

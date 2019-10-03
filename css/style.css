@@ -990,7 +990,7 @@ textarea.form-control {
 
 @media screen and (max-width: 768px) {
   .como-chegar__form {
-    padding: 50px 80px 50px 50px;
+    padding: 40px 80px 50px 50px;
     order: 1;
   }
 }
@@ -1090,6 +1090,14 @@ textarea.form-control {
   color: #f97730;
 }
 
+.implantacao__item-icon:before {
+  z-index: -1;
+}
+
+.implantacao__item-icon:after {
+  z-index: 4;
+}
+
 .implantacao {
   overflow: hidden;
   max-width: 1600px;
@@ -1097,11 +1105,29 @@ textarea.form-control {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 992px) {
+  .implantacao {
+    transform: none !important;
+    background-image: url(../images/galeria/main.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    max-height: unset;
+  }
+}
+
 .implantacao__header {
   position: relative;
   z-index: 2;
   padding: 40px 0 10px 0;
   margin-bottom: -40px;
+}
+
+@media screen and (max-width: 992px) {
+  .implantacao__header {
+    margin-bottom: 0;
+    padding: 20px 0;
+  }
 }
 
 .implantacao__header .inner-title {
@@ -1113,23 +1139,37 @@ textarea.form-control {
   background-color: #f97730;
 }
 
+@media screen and (max-width: 768px) {
+  .implantacao__header .inner-title {
+    display: none;
+  }
+}
+
 .implantacao__content {
   z-index: 1;
   cursor: move;
-  cursor: grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab;
 }
 
 .implantacao__content:active {
   cursor: grabbing;
-  cursor: -moz-grabbing;
-  cursor: -webkit-grabbing;
+}
+
+@media screen and (max-width: 992px) {
+  .implantacao__content {
+    transform: none !important;
+    padding: 10px 20px 10px 30px;
+  }
 }
 
 .implantacao__scene {
   width: 1600px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+  .implantacao__scene {
+    display: none;
+  }
 }
 
 .implantacao__item {
@@ -1142,6 +1182,19 @@ textarea.form-control {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 992px) {
+  .implantacao__item {
+    position: relative;
+    top: unset !important;
+    left: unset !important;
+    margin-bottom: 40px;
+    animation: none;
+  }
+  .implantacao__item.checkin {
+    display: none;
+  }
 }
 
 .implantacao__item-icon {
@@ -1250,6 +1303,17 @@ textarea.form-control {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 992px) {
+  .implantacao__item-box {
+    width: 78%;
+    max-width: unset;
+    opacity: 1;
+    padding: 7px 25px 7px 30px;
+    right: 89%;
+    top: 1.5px;
+  }
+}
+
 .implantacao__item-box span {
   display: block;
   font-size: 21px;
@@ -1277,6 +1341,12 @@ textarea.form-control {
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
   transform: scale(1.05);
+}
+
+@media screen and (max-width: 992px) {
+  .implantacao__item:hover {
+    transform: scale(0.9);
+  }
 }
 
 .implantacao__item:hover .implantacao__item-box {
