@@ -12,14 +12,12 @@
     max-height: 100vh;
     margin: 0 auto;
 
+    
     @media screen and (max-width: $bp-LG) {
         transform: none !important;
-        background-image: url(../images/galeria/main.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center right;
         max-height: unset;
     }
+
 
     &__header {
         position: relative;
@@ -30,6 +28,8 @@
         @media screen and (max-width: $bp-LG) {
             margin-bottom: 0;
             padding: 20px 0;
+            background-color: #fff;
+            margin-top: 20px;
         }
 
         .inner-title {
@@ -38,10 +38,6 @@
 
             &:after {
                 background-color: $color-primary;
-            }
-
-            @media screen and (max-width: $bp-MD) {
-                display: none;
             }
         }
     }
@@ -57,6 +53,12 @@
         @media screen and (max-width: $bp-LG) {
             transform: none !important;
             padding: 10px 20px 10px 30px;
+            padding-top: 40px;
+            transform: none !important;
+            background-image: url(../images/galeria/main.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right 0;
         }
     }
 
@@ -230,10 +232,6 @@
 
         &:hover {
             @include scale(1.05);
-
-            @media screen and (max-width: $bp-LG) {
-                transform: scale(.9);
-            }
 
             .implantacao__item-box {
                 padding: 7px 25px 7px 30px;

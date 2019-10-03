@@ -4,7 +4,7 @@
 <head>
   <!-- partial:../partials/__head.html -->
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Villa Flora</title>
@@ -23,11 +23,13 @@
   <META NAME="coverage" CONTENT="Worldwide">
   <META NAME="Author" CONTENT="www.evolveme.com.br">
   <META NAME="Generator" CONTENT="">
-  <meta name="description" content="" />
+  <meta name="description"
+    content="" />
 
   <!-- Load META-TAGS for SOCIAL MEDIAS -->
   <meta property="og:title" content="Title">
-  <meta property="og:description" content="">
+  <meta property="og:description"
+    content="">
   <meta property="og:image" content="http://www.">
   <meta property="og:url" content="http://www.">
   <meta property="og:type" content="website" />
@@ -45,13 +47,12 @@
   <script src="https://unpkg.com/scrollbooster@1.1.0/dist/scrollbooster.min.js" defer></script>
 
   <!-- Custom JS -->
-  <script type="text/javascript"
-    src="http://maps.google.com/maps/api/js?key=AIzaSyDAAbOGMKsKG-fQAqxRG_psTp2GJsHlsPo&sensor=false&libraries=places"
-    defer></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDAAbOGMKsKG-fQAqxRG_psTp2GJsHlsPo&sensor=false&libraries=places" defer></script>
   <script src="../js/main.js" defer></script>
   <script src="../js/carousels.js" defer></script>
   <script src="../js/como-chegar.js" defer></script>
   <script src="../js/implantacao.js" defer></script>
+  <script src="../js/galeria.js" defer></script>
   <script src="../js/responsivenav.js" defer></script>
   <script src="../js/form-validation.js" defer></script>
   <script src="../js/inputmasks.js" defer></script>
@@ -72,6 +73,58 @@
 
 <body class=" wow fadeIn">
   <main>
+
+    <section id="galeria" class="galeria">
+      <div class="row">
+
+        <div class="col-lg-8 pl-lg-0 galeria__main-wrapper order-last order-md-first">
+          <div class="galeria__main-img wow fadeInLeft">
+            <img id="galeria-main-img" src="../images/galeria/main.png" alt="" />
+          </div>
+        </div>
+
+        <div class="col-lg-4 galeria__list-wrapper pl-0">
+          <button type="button" class="galeria__list-item wow fadeInRight active" data-open="../images/galeria/main.png">
+            <img src="../images/galeria/1.png" alt="">
+          </button>
+
+
+          <button type="button" class="galeria__list-item wow fadeInRight" data-open="../images/galeria/main.png">
+            <img src="../images/galeria/2.png" alt="">
+          </button>
+
+          <button type="button" class="galeria__list-item wow fadeInRight" data-open="../images/galeria/4.png">
+            <img src="../images/galeria/3.png" alt="">
+          </button>
+
+
+          <button type="button" class="galeria__list-item wow fadeInRight" data-open="../images/galeria/main.png">
+            <img src="../images/galeria/4.png" alt="">
+          </button>
+
+
+          <button type="button" class="galeria__list-item wow fadeInRight" data-open="../images/galeria/main.png">
+            <img src="../images/galeria/5.png" alt="">
+          </button>
+
+
+          <button type="button" class="galeria__list-item wow fadeInRight" data-open="../images/galeria/main.png">
+            <img src="../images/galeria/6.png" alt="">
+          </button>
+
+
+          <button type="button" class="galeria__list-item wow fadeInRight" data-open="../images/galeria/main.png">
+            <img src="../images/galeria/7.png" alt="">
+          </button>
+
+
+          <button type="button" class="galeria__list-item wow fadeInRight" data-open="../images/galeria/main.png">
+            <img src="../images/galeria/8.png" alt="">
+          </button>
+        </div>
+
+      </div>
+    </section>
 
     <section id="implantacao" class="implantacao wow fadeIn">
       <div class="implantacao__header">
@@ -305,42 +358,42 @@
     </section>
     <!-- partial:../partials/__footer.html -->
     <footer class="main-footer">
-      <div class="main-footer__brands  wow fadeInUp">
+    <div class="main-footer__brands  wow fadeInUp">
         <div class="container position-relative h-100">
-          <div class="main-footer__brands-content">
-            <a href="#">
-              <img class="villa" src="../images/brands/villa-white.png" alt="Logo Villa Flora em branco">
-            </a>
-            <div>
-              <a href="#">
-                <img class="wolf" src="../images/brands/wolf.png" alt="Logo Wolf em branco">
-              </a>
-              <a href="#">
-                <img class="mendes" src="../images/brands/mendes.png" alt="Logo Mendes Ortega em branco">
-              </a>
+            <div class="main-footer__brands-content">
+                <a href="#">
+                    <img class="villa" src="../images/brands/villa-white.png" alt="Logo Villa Flora em branco">
+                </a>
+                <div>
+                    <a href="#">
+                        <img class="wolf" src="../images/brands/wolf.png" alt="Logo Wolf em branco">
+                    </a>
+                    <a href="#">
+                        <img class="mendes" src="../images/brands/mendes.png" alt="Logo Mendes Ortega em branco">
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="main-footer__splice">
-            <a href="#">
-              <img src="../images/brands/splice.png" alt="Logo Splice em laranja">
-            </a>
-          </div>
+            <div class="main-footer__splice">
+                <a href="#">
+                    <img src="../images/brands/splice.png" alt="Logo Splice em laranja">
+                </a>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <div class="main-footer__copyright  wow fadeIn">
+    <div class="main-footer__copyright  wow fadeIn">
         <div class="container">
-          <p class="wow fadeInUp">Incorporação e construção: ANDIRA EMPREENDIMENTOS IMOBILIÁRIOS LTDA. Condomínio dos
-            Antúrios: Projeto
-            aprovado pela Prefeitura Municipal de Votorantim sob o alvará nº 173/2017, em 30/03/2017. Incorporação
-            imobiliária registrada sob o n.º R. 3, datado de 01 de junho de 2017, da matrícula nº 15.072, do Oficial
-            de Registro de Imóveis do Município de Votorantim – SP. Móveis, equipamentos e decorações são sugestões
-            e não fazem parte do projeto a ser entregue pela Incorporadora. Consulte unidades/modelos disponíveis.
-            Atendimento das 09h às 18h, todos os dias da semana. Vendas: WOLF IMÓVEIS CRECI 20.226J / MENDES ORTEGA
-            CRECI 9.835J.</p>
+            <p class="wow fadeInUp">Incorporação e construção: ANDIRA EMPREENDIMENTOS IMOBILIÁRIOS LTDA. Condomínio dos
+                Antúrios: Projeto
+                aprovado pela Prefeitura Municipal de Votorantim sob o alvará nº 173/2017, em 30/03/2017. Incorporação
+                imobiliária registrada sob o n.º R. 3, datado de 01 de junho de 2017, da matrícula nº 15.072, do Oficial
+                de Registro de Imóveis do Município de Votorantim – SP. Móveis, equipamentos e decorações são sugestões
+                e não fazem parte do projeto a ser entregue pela Incorporadora. Consulte unidades/modelos disponíveis.
+                Atendimento das 09h às 18h, todos os dias da semana. Vendas: WOLF IMÓVEIS CRECI 20.226J / MENDES ORTEGA
+                CRECI 9.835J.</p>
         </div>
-      </div>
-    </footer>
+    </div>
+</footer>
     <!-- partial -->
   </main>
   <button class="scroll-top"></button>
