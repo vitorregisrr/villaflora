@@ -9,8 +9,8 @@
     }
 
     &__slide {
-        position: absolute;
         display: flex;
+        position: absolute;
         height: 100%;
         top: 0;
         left: 0;
@@ -18,9 +18,11 @@
         opacity: 0;
         pointer-events: none;
         z-index: 5;
+        visibility: hidden;
         @include transition();
 
         &.active{
+            visibility: visible;
             opacity: 1;
             pointer-events: all;
         }
@@ -53,18 +55,26 @@
             width: 140%;
             height: 100%;
             overflow: hidden;
-            transform: skewX(-19deg) translateX(-5.5%);
+            transform: skewX(-19deg);
             
             @media screen and (max-width: $bp-XL){
                 transform: skewX(-19deg) translateX(6%);
             }
             
             img {
+                position: absolute;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
-                transform: skewX(19deg);
+                transform: skewX(19deg) translateX(-10%);
+                opacity: 0;
+                visibility: hidden;
+
+                &.active{
+                    opacity: 1;
+                    visibility: visible;
+                }
                 
                 @media screen and (max-width: $bp-XL){
                     transform: skewX(19deg) translateX(-15%);
