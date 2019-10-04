@@ -1,116 +1,195 @@
 .main-nav {
-    background-color: #fff;
-    background: linear-gradient(to right, rgba(247, 247, 247, 0.3192), rgba(255, 255, 255, 0.563), rgba(255, 255, 255, 0.563), rgba(255, 255, 255, 0.563), rgba(255, 255, 255, 0.863), rgba(247, 247, 247, 0.392));
-    width: 100%;
-    display: block;
-    z-index: 5;
+   background-color: #fff;
+   position: relative;
+   z-index: 9;
+   width: 100%;
+   padding: 20px 0;
 
-    @media screen and(max-width: $bp-LG) {
-        position: absolute;
-        left: 0;
-        top: 70px;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        background-color: rgba(238, 249, 252, 0.932);
-        @include transition();
+   @media screen and (max-width: $bp-LG) {
+      display: none;
+   }
 
-        &.active {
-            max-height: 1000px;
-        }
-    }
+   .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
 
-    &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
+   &__list {
+      display: flex;
+   }
 
-        @media screen and(max-width: $bp-LG) {
-            flex-direction: column;
-        }
+   &__item {
+      display: inline-block;
+      text-transform: uppercase;
+      font-family: 'MP';
+      font-size: 17px;
+      color: #949494;
+      @include transition();
 
-        &__item {
-            display: block;
-            padding: 10px 30px;
-            font-size: 15px;
-            line-height: 17px;
-            text-transform: uppercase;
-            color: black;
-            text-align: center;
-            letter-spacing: 0.2px;
-            @include transition(0.2s);
+      &:hover {
+         color: $color-primary;
+         @include scale(1.02);
+      }
 
+      a {
+         color: inherit;
+      }
 
-            @media screen and (min-width: 768px) and (max-width: 992px) {
-                font-size: 14px;
-            } 
+      &:not(:first-child) {
+         margin-left: 70px;
 
-            @media screen and(max-width: $bp-LG) {
-                padding: 15px 10px;
+         @media screen and (max-width: 1200px) {
+            margin-left: 30px;
+         }
+      }
 
-                .dropdown-menu {
-                    position: static !important;
-                    transform: translateX(0) !important;
-                    border: none;
-                    text-align: center;
-                    width: 100%;
-                    font-family: 'Myriad Pro Regular';
-                    display: flex !important;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    border: none;
-                    max-height: 0;
-                    overflow: hidden;
-                    margin: 0;
-                    padding: 0 !important;
-                    transition: all 0.4s ease-in-out;
-                    box-shadow: none !important;
-                    border-radius: 0;
-                    background-color: transparent !important;
-                    
-                    a{
-                        width: 60% !important;
-                    }
+      &.obras {
+         position: relative;
+         color: $color-primary;
+         padding-left: 30px;
 
-                    &.show {
-                        border-top: 1px solid black;
-                        max-height: 300px;
-                        margin: 10px 0;
-                    }
-                }
+         &:after {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            background-image: url(../images/ico/cog.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
 
-            }
+         }
+      }
+   }
 
-            &:not(:last-child) {
-                border-right: 1px solid black;
+}
 
+.sticky-nav {
+   position: fixed;
+   z-index: 8;
+   top: 0;
+   width: 100%;
+   left: 0;
+   background-color: $color-primary;
+   font-family: 'MP';
+   padding: 10px 0;
+   opacity: 0;
+   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.108);
+   @include transition();
 
-                @media screen and(max-width: $bp-LG) {
-                    border-right: none;
-                    border-bottom: 1px solid black;
-                    width: 100%;
-                }
-            }
+   @media screen and (max-width: $bp-LG) {
+      position: relative;
+      opacity: 1;
+   }
 
-            &.active,
-            &:hover,
-            &:active {
-                text-shadow: 0 0 .65px #333, 0 0 .65px #333;
-            }
+   &.sticky {
+      opacity: 1;
+      position: fixed;
+   }
 
-            &:nth-child(3){
-                @media screen and (min-width: $bp-LG){
-                    min-width: 23s0px;
-                }
-            }
+   .container {
+      display: flex;
+      justify-content: space-between;
+   }
 
-            a {
-                color: inherit;
-                width: 100%;
-                display: block;
-            }
-        }
-    }
+   &__brand {
+      width: 130px;
+
+      img {
+         width: 100%;
+      }
+   }
+
+   &__toggler {
+      position: relative;
+      text-transform: uppercase;
+      padding-right: 50px;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: transparent;
+      border: none;
+      margin-left: 10px;
+      @include transition();
+
+      &:before {
+         content: '';
+         position: absolute;
+         right: 10px;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 30px;
+         height: 30px;
+         background-image: url(../images/ico/toggle.png);
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position: center center;
+      }
+
+      &:hover {
+         @include scale(1.02);
+      }
+
+      &[aria-expanded="true"] {
+         padding-right: 56px;
+
+         &:before {
+            width: 38px;
+            height: 38px;
+            background-color: #d45d1c;
+            border-radius: 50%;
+            background-image: url(../images/ico/close.png);
+            background-size: 40%;
+         }
+      }
+   }
+
+   &__actions {
+      display: flex;
+      align-items: center;
+   }
+
+   &__menu {
+      position: absolute;
+      right: -400px;
+      bottom: 0;
+      transform: translateY(100%);
+      background-image: url(../images/trumps/moldura-menu.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 400px;
+      width: 320px;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+      padding: 40px 30px 40px 60px;
+
+      @media screen and (max-width: $bp-MD) {
+         transition: all 0.3s ease-in-out;
+      }
+
+      &.active {
+         opacity: 1;
+         right: 0;
+      }
+
+      &-item {
+         color: #fff;
+         font-size: 17px;
+         text-transform: uppercase;
+         margin-bottom: 10px;
+         @include transition();
+
+         &:hover {
+            padding-left: 10px;
+         }
+
+         a {
+            color: inherit;
+         }
+      }
+   }
 }

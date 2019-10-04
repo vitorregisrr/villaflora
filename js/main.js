@@ -28,4 +28,14 @@
     setTimeout( () => {
         window.dispatchEvent(new Event('resize'));
     }, 400);
+
+     // Navbar stick event
+  $(document).on("scroll", function () {
+    if ($(document).scrollTop() > 380) {
+      $("#sticky-nav").addClass("sticky");
+    } else if (!($(".navbar-collapse").hasClass('show'))) {
+      $("#sticky-nav").removeClass("sticky");
+    }
+  });
+
 })();

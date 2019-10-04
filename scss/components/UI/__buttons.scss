@@ -47,3 +47,21 @@
         color: black;
     }
 }
+
+
+.btn-outline-white{
+    font-family: 'MP';
+    background-color: transparent;
+    border: 1.4px solid #fff;
+    border-radius: 2px;
+    padding: 10px 17px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    @include transition();
+
+    &:hover{
+        background-color: #fff;
+        color: $color-primary;
+    }
+}
