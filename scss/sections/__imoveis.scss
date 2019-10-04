@@ -3,7 +3,7 @@
     overflow: hidden;
 
     &__header {
-        padding: 50px 0;
+        padding: 70px 0 60px 0;
 
         .inner-title {
             color: #949494;
@@ -226,13 +226,16 @@
         margin-bottom: 150px;
         opacity: 0;
         transform: translateY(100px);
-        visibility: visible;
+        visibility: hidden;
+        display: none;
         @include transition();
+        animation: fadeIn 1s;
 
-        &.active{
+        &.active {
             transform: translateY(0);
             opacity: 1;
             visibility: visible;
+            display: block;
         }
 
         @media screen and (max-width: $bp-LG) {
@@ -245,37 +248,54 @@
             .imoveis__slide-item-info {
                 background-color: #fec938f5;
             }
+
+            .imoveis__slide-item-more {
+                background-color: #fec938f5;
+            }
         }
 
         &.purple {
             background-color: $color-purple;
 
             .imoveis__slide-item-info {
-                background-color: $color-purple;
+                background-color: #743e7f;
+            }
+
+            .imoveis__slide-item-info-more {
+                background-color: #5b3064;
             }
         }
-
+        
         &.orange {
             background-color: $color-primary;
-
+            
             .imoveis__slide-item-info {
-                background-color: $color-primary;
+                background-color: #f97630e3;
+            }
+            
+            .imoveis__slide-item-more {
+                background-color: #d25c1b;
             }
         }
-
+        
         &.pink {
             background-color: $color-secondary;
-
+            
             .imoveis__slide-item-info {
-                background-color: $color-secondary;
+                background-color: #f23778de;
+            }
+            
+            .imoveis__slide-item-more {
+                background-color: #f23778;
             }
         }
-
+        
         &-caption {
             padding-top: 30px;
             color: #fff;
             max-width: 290px;
             padding-left: 40px;
+            animation: fadeInUp 1s;
         }
 
         &-title {
@@ -299,12 +319,10 @@
             display: flex;
             flex-wrap: wrap;
             margin-top: 30px;
+            animation: fadeInUp 1s;
 
             @media screen and (max-width: $bp-LG) {
                 margin-bottom: 30px;
-            }
-
-            @media screen and (max-width: $bp-MD){
                 justify-content: center;
             }
         }
@@ -329,14 +347,14 @@
                 height: 150px;
             }
 
-            @media screen and (max-width: $bp-MD){
+            @media screen and (max-width: $bp-MD) {
                 width: 120px;
                 height: 120px;
             }
 
             &.active,
             &:hover {
-                background-color: #f5b030;
+                background-color: rgba(0, 0, 0, 0.096);
             }
 
             &:hover {
@@ -346,7 +364,7 @@
             img {
                 width: 90px;
 
-                @media screen and (max-width: $bp-MD){
+                @media screen and (max-width: $bp-MD) {
                     display: none;
                 }
             }
@@ -359,11 +377,16 @@
         }
 
         &-item {
-            position: relative;
+            position: absolute;
             width: 100%;
             height: 100%;
             opacity: 0;
-            visibility: hidden;
+            animation: fadeInRight 1s;
+
+            @media screen and (max-width: $bp-LG) {
+                position: relative;
+                display: none;
+            }
 
             &-img {
                 position: relative;
@@ -421,23 +444,23 @@
                 opacity: 0;
                 @include transition(.6s);
 
-                @media screen and (max-width: $bp-MD){
+                @media screen and (max-width: $bp-MD) {
                     left: 10%;
                 }
 
-                @media screen and (max-width: 340px){
+                @media screen and (max-width: 340px) {
                     width: 250px;
                 }
             }
 
-            &-caption{
+            &-caption {
                 padding: 25px 25px 30px 25px;
                 color: #FFF;
 
-                .title{
+                .title {
                     text-transform: uppercase;
                     font-size: 20px;
-        
+
                     span {
                         font-size: 45px;
                         margin-top: -8px;
@@ -447,18 +470,18 @@
                     }
                 }
 
-                .desc{
+                .desc {
                     font-size: 15px;
                     margin-bottom: 13px;
                 }
 
-                .concluido{
+                .concluido {
                     position: relative;
                     padding-left: 25px;
                     text-transform: uppercase;
                     font-size: 14px;
 
-                    &:after{
+                    &:after {
                         content: '';
                         position: absolute;
                         left: 0px;
@@ -474,12 +497,11 @@
                 }
             }
 
-            &-more{
+            &-more {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-top: auto;
-                background-color: #f5b030;
                 color: #fff;
                 font-weight: bold;
                 font-size: 19px;
@@ -488,7 +510,7 @@
                 height: 85px;
                 @include transition();
 
-                &:hover{
+                &:hover {
                     color: #fff;
                     background-color: darken(#f5b030, 10);
                 }
@@ -499,13 +521,14 @@
                 transform: translateX(0);
                 opacity: 1;
                 visibility: visible;
+                display: block;
 
-                .imoveis__slide-item-info{
+                .imoveis__slide-item-info {
                     opacity: 1;
                     max-height: 500px;
                 }
-                
-                .imoveis__slide-item-img{
+
+                .imoveis__slide-item-img {
                     margin-left: 0;
                     opacity: 1;
                 }
