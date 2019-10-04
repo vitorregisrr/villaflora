@@ -8,6 +8,7 @@
     border: none;
     opacity: 0;
     background-color: $color-primary;
+    border-radius: 50%;
     cursor: pointer;
     @include transition();
 
