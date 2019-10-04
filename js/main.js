@@ -24,14 +24,4 @@
     });
 
     window.dispatchEvent(new Event('resize'));
-
-    
-    $('.toggler').click(function(){
-
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-
-        $( $(this).attr("data-toggle") ).toggleClass('active');
-    })
-
 })();

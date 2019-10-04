@@ -22,4 +22,12 @@
         prevImg.siblings().removeClass('active');
         prevImg.addClass('active');
     });
+
+    $('.diferenciais-toggler').click(function(){
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        $( $(this).attr("data-toggle") ).toggleClass('active');
+    })
 })();

@@ -52,6 +52,7 @@
   <script src="../js/carousels.js" defer></script>
   <script src="../js/como-chegar.js" defer></script>
   <script src="../js/implantacao.js" defer></script>
+  <script src="../js/imoveis.js" defer></script>
   <script src="../js/diferenciais.js" defer></script>
   <script src="../js/galeria.js" defer></script>
   <script src="../js/responsivenav.js" defer></script>
@@ -85,24 +86,25 @@
       <div class="imoveis__tabs">
         <div class="row">
           <div class="col-12 col-lg-3 obras-wrapper px-md-0">
-              <span class="imoveis__tabs-header wow fadeInUp obras">Em obras</span>
+            <span class="imoveis__tabs-header wow fadeInUp obras">Em obras</span>
             <div class="row">
               <div class="col-12">
-                <button class="imoveis__tabs-item orange justify-content-lg-end pr-4">
-                <div class="caption wow fadeInUp">
+                <button data-toggle="#imoveis-slide-anturios"
+                  class="imoveis-toggler imoveis__tabs-item orange justify-content-lg-end pr-4">
+                  <div class="caption wow fadeInUp">
                     Condomínio dos
-                  <span class="d-block nome mb-2">
-                    Antúrios
-                  </span>
-                  <small>Casas e apartamentos de</small>
-                  <span class="d-block tamanho">
-                    44m² a 62m²
-                  </span>
+                    <span class="d-block nome mb-2">
+                      Antúrios
+                    </span>
+                    <small>Casas e apartamentos de</small>
+                    <span class="d-block tamanho">
+                      44m² a 62m²
+                    </span>
 
-                  <span class="more">
-                    Saiba mais
-                  </span>
-                </div>
+                    <span class="more">
+                      Saiba mais
+                    </span>
+                  </div>
                 </button>
               </div>
             </div>
@@ -113,7 +115,7 @@
             <div class="row flex-column flex-lg-row">
 
               <div class="col-12 col-lg-4 px-0">
-                <button class="imoveis__tabs-item purple">
+                <button data-toggle="#imoveis-slide-carmelias" class="imoveis-toggler imoveis__tabs-item purple">
                   <div class="caption wow fadeInUp">
                     Condomínio das
                     <span class="d-block nome mb-2">
@@ -132,7 +134,7 @@
               </div>
 
               <div class="col-12 col-lg-4 px-0">
-                <button class="imoveis__tabs-item yellow">
+                <button data-toggle="#imoveis-slide-gardenias" class="imoveis-toggler imoveis__tabs-item yellow">
                   <div class="caption wow fadeInUp">
                     Condomínio das
                     <span class="d-block nome mb-2">
@@ -151,7 +153,8 @@
               </div>
 
               <div class="col-12 col-lg-4 px-0 justify-content-lg-start">
-                <button class="imoveis__tabs-item pink justify-content-lg-start pl-lg-4">
+                <button data-toggle="#imoveis-slide-rosas"
+                  class="imoveis-toggler imoveis__tabs-item pink justify-content-lg-start pl-lg-4">
                   <div class="caption wow fadeInUp">
                     Condomínio das
                     <span class="d-block nome mb-2">
@@ -174,13 +177,76 @@
         </div>
       </div>
 
+      <div id="imoveis-slide-anturios" class="imoveis__slide yellow  wow fadeInUp active">
+        <div class="container h-100">
+          <div class="row h-100">
+
+            <div class="col-lg-5">
+              <div class="imoveis__slide-caption">
+                <h3 class="imoveis__slide-title wow fadeInUp">
+                  Condomínio das
+                  <span>Gardênias</span>
+                </h3>
+                <p class="imoveis__slide-desc  wow fadeInUp">
+                  Donec mollis ipsum in leo dapi
+                  bus aliquet, phasellus elementum
+                  consequat faucibus.
+                </p>
+              </div>
+
+              <div class="imoveis__slide-options">
+
+                <button class="imoveis__slide-option wow fadeInUp active" data-toggle="#imovel-anturios-1">
+                  <img src="../images/ico/house.png" alt="Ícone de uma casa">
+                  <span class="tamanho">115m²</span>
+                  <div class="nome">Casa Paula</div>
+                </button>
+
+                <button class="imoveis__slide-option wow fadeInUp" data-toggle="#imovel-anturios-2">
+                  <img src="../images/ico/house.png" alt="Ícone de uma casa">
+                  <span class="tamanho">126m²</span>
+                  <div class="nome">Casa Flávia</div>
+                </button>
+
+              </div>
+
+            </div>
+            <div class="col-lg-7 h-100">
+              <div id="imovel-anturios-1" class="imoveis__slide-item active">
+                <div class="imoveis__slide-item-img">
+                  <img src="../images/backgrounds/apto-camila.png" alt="">
+                </div>
+                <div class="imoveis__slide-item-info">
+                  <div class="imoveis__slide-item-caption">
+                    <h5 class="title">
+                      Casa
+                      <span>Paula</span>
+                    </h5>
+                    <p class="desc">
+                      Medidas: 60m² <br />
+                      Dormitórios: 2 <br />
+                      Vagas: 1 ou 2 <br />
+                      Outros: Varanda
+                    </p>
+                    <div class="concluido">
+                      Obras concluidas
+                    </div>
+                  </div>
+                  <a href="#" role="button" class="imoveis__slide-item-more">Conheça</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="diferenciais" class="diferenciais">
       <div class="container">
         <div class="row justify-content-center align-items-center flex-column flex-md-row">
 
-          <button class="diferenciais__item wow fadeInLeft btn-transparent toggler" data-toggle="#slide-seguranca">
+          <button class="diferenciais__item wow fadeInLeft btn-transparent diferenciais-toggler"
+            data-toggle="#slide-seguranca">
             <h4 class="diferenciais__item-title">Segurança</h4>
             <div class="diferenciais__item-circle" style="background-image: url('../images/galeria/main.png')">
               <div class="diferenciais__item-desc">
@@ -189,7 +255,8 @@
             </div>
           </button>
 
-          <button class="diferenciais__item wow fadeInUp btn-transparent toggler" data-toggle="#slide-lazer">
+          <button class="diferenciais__item wow fadeInUp btn-transparent diferenciais-toggler"
+            data-toggle="#slide-lazer">
             <h4 class="diferenciais__item-title">Lazer</h4>
             <div class="diferenciais__item-circle" style="background-image: url('../images/backgrounds/lazer.png')">
               <div class="diferenciais__item-desc">
@@ -198,7 +265,8 @@
             </div>
           </button>
 
-          <button class="diferenciais__item wow fadeInRight btn-transparent toggler" data-toggle="#slide-localizacao">
+          <button class="diferenciais__item wow fadeInRight btn-transparent diferenciais-toggler"
+            data-toggle="#slide-localizacao">
             <h4 class="diferenciais__item-title">Localização</h4>
             <div class="diferenciais__item-circle"
               style="background-image: url('../images/backgrounds/localizacao.png')">
@@ -241,7 +309,8 @@
           </div>
 
           <div class="diferenciais__slide-actions">
-            <button class="diferenciais__slide-actions-item closee toggler" data-toggle="#slide-seguranca"></button>
+            <button class="diferenciais__slide-actions-item closee diferenciais-toggler"
+              data-toggle="#slide-seguranca"></button>
             <button class="diferenciais__slide-actions-item right"></button>
             <button class="diferenciais__slide-actions-item left"></button>
           </div>
@@ -277,7 +346,8 @@
           </div>
 
           <div class="diferenciais__slide-actions">
-            <button class="diferenciais__slide-actions-item closee toggler" data-toggle="#slide-lazer"></button>
+            <button class="diferenciais__slide-actions-item closee diferenciais-toggler"
+              data-toggle="#slide-lazer"></button>
             <button class="diferenciais__slide-actions-item right"></button>
             <button class="diferenciais__slide-actions-item left"></button>
           </div>
@@ -313,7 +383,8 @@
           </div>
 
           <div class="diferenciais__slide-actions">
-            <button class="diferenciais__slide-actions-item closee toggler" data-toggle="#slide-localizacao"></button>
+            <button class="diferenciais__slide-actions-item closee diferenciais-toggler"
+              data-toggle="#slide-localizacao"></button>
             <button class="diferenciais__slide-actions-item right"></button>
             <button class="diferenciais__slide-actions-item left"></button>
           </div>
