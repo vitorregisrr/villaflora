@@ -24,4 +24,8 @@
     });
 
     window.dispatchEvent(new Event('resize'));
+
+    setTimeout( () => {
+        window.dispatchEvent(new Event('resize'));
+    }, 400);
 })();
