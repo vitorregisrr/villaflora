@@ -2,8 +2,9 @@
     'use strict';
 
     $('#toggle-nav').click(function () {
-        const isExpanded = $(this).attr('aria-expanded');
-        $('#sticky-nav').attr('aria-expanded', !isExpanded);
+        const isExpanded = $(this).attr('aria-expanded') === 'true' ? true : false;
+
+        $(this).attr('aria-expanded', !isExpanded);
         $('#sticky-menu').toggleClass('active');
     });
 
