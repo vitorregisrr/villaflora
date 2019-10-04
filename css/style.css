@@ -1503,10 +1503,10 @@ textarea.form-control {
 }
 
 .imoveis__slide.purple .imoveis__slide-item-info {
-  background-color: #743e7f;
+  background-color: rgba(116, 62, 127, 0.856);
 }
 
-.imoveis__slide.purple .imoveis__slide-item-info-more {
+.imoveis__slide.purple .imoveis__slide-item-more {
   background-color: #5b3064;
 }
 
