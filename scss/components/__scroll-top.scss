@@ -1,37 +1,56 @@
-.scroll-top{
-    position: absolute;
+.scroll-top {
+    position: fixed;
     right: 130px;
-    bottom: 430px;
+    bottom: -40px;
     width: 35px;
     height: 35px;
-    background-image: url(../images/ico/scrolltop.png);
-    background-size: contain;
-    background-repeat: no-repeat;
     z-index: 5;
-    background-color: transparent;
     border: none;
+    opacity: 0;
+    background-color: $color-primary;
     cursor: pointer;
     @include transition();
-    opacity: 0;
 
-    &.show{
+    &.show {
         opacity: 1;
+        bottom: 40px;
+
+        @media screen and (max-width: $bp-MD) {
+            bottom: 50px;
+        }
     }
-    &:hover{
+
+    &:hover {
         @include scale(1.1);
     }
 
-    &:active, &:focus{
+    &:active,
+    &:focus {
         outline: none;
     }
 
-    @media screen and (max-width: $bp-MD){
+    @media screen and (max-width: $bp-MD) {
         position: fixed;
-        right: 50px;
-        bottom: 100px;
+        right: 30px;
     }
 
-    @media screen and (min-width: 1000px) and (max-width: 1450px){
+    @media screen and (min-width: 1000px) and (max-width: 1450px) {
         right: 25px;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 13px;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background-image: url(../images/ico/chevron-right.png);
+        background-size: contain;
+        background-position: center center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        transform: rotate(-90deg);
     }
 }

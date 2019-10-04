@@ -909,28 +909,32 @@ textarea.form-control {
 }
 
 .scroll-top {
-  position: absolute;
+  position: fixed;
   right: 130px;
-  bottom: 430px;
+  bottom: -40px;
   width: 35px;
   height: 35px;
-  background-image: url(../images/ico/scrolltop.png);
-  background-size: contain;
-  background-repeat: no-repeat;
   z-index: 5;
-  background-color: transparent;
   border: none;
+  opacity: 0;
+  background-color: #f97730;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  opacity: 0;
 }
 
 .scroll-top.show {
   opacity: 1;
+  bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll-top.show {
+    bottom: 50px;
+  }
 }
 
 .scroll-top:hover {
@@ -948,8 +952,7 @@ textarea.form-control {
 @media screen and (max-width: 768px) {
   .scroll-top {
     position: fixed;
-    right: 50px;
-    bottom: 100px;
+    right: 30px;
   }
 }
 
@@ -957,6 +960,22 @@ textarea.form-control {
   .scroll-top {
     right: 25px;
   }
+}
+
+.scroll-top:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 13px;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/ico/chevron-right.png);
+  background-size: contain;
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform: rotate(-90deg);
 }
 
 .como-chegar {
@@ -1231,8 +1250,9 @@ textarea.form-control {
 .imoveis__header .inner-title:after {
   position: absolute;
   left: 50%;
+  background-color: #e93178;
   transform: translateX(-50%);
-  width: 50%;
+  width: 44%;
 }
 
 @media screen and (max-width: 768px) {

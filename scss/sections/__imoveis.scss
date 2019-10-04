@@ -13,8 +13,9 @@
             &:after {
                 position: absolute;
                 left: 50%;
+                background-color: $color-secondary;
                 transform: translateX(-50%);
-                width: 50%;
+                width: 44%;
 
                 @media screen and (max-width: $bp-MD) {
                     width: 70%;
