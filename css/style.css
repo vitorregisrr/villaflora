@@ -396,10 +396,22 @@ button:focus {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 768px) {
+  .sticky-nav {
+    overflow: hidden;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .sticky-nav {
     position: relative;
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sticky-nav.active {
+    overflow: visible;
   }
 }
 
@@ -493,6 +505,13 @@ button:focus {
   padding: 40px 30px 40px 60px;
 }
 
+@media screen and (max-width: 340px) {
+  .sticky-nav__menu {
+    width: 290px;
+    height: 330px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .sticky-nav__menu {
     transition: all 0.3s ease-in-out;
@@ -514,6 +533,12 @@ button:focus {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 340px) {
+  .sticky-nav__menu-item {
+    font-size: 15px;
+  }
 }
 
 .sticky-nav__menu-item:hover {

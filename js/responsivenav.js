@@ -6,6 +6,7 @@
 
         $(this).attr('aria-expanded', !isExpanded);
         $('#sticky-menu').toggleClass('active');
+        $('#sticky-nav').toggleClass('active');
     });
 
     $('#sticky-menu a').click(function () {
