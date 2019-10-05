@@ -1,0 +1,99 @@
+.plus-img {
+    position: relative;
+    width: 100%;
+
+    .plus-top,
+    .plus-bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .plus-top {
+        &:after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            background-image: url('../images/ico/plus-pink.png');
+            background-size: contain;
+            background-position: center center;
+            z-index: 2;
+
+            @media screen and (max-width: $bp-MD) {
+                height: 20px;
+                width: 20px;
+                right: -10px;
+                top: -10px;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 30px;
+            height: 30px;
+            background-image: url('../images/ico/plus-pink.png');
+            background-size: contain;
+            background-position: center center;
+            z-index: 2;
+
+            @media screen and (max-width: $bp-MD) {
+                height: 20px;
+                width: 20px;
+                left: -10px;
+                top: -10px;
+            }
+        }
+    }
+
+    .plus-bottom {
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            background-image: url('../images/ico/plus-pink.png');
+            background-size: contain;
+            background-position: center center;
+            z-index: 2;
+
+            @media screen and (max-width: $bp-MD) {
+                height: 20px;
+                width: 20px;
+                right: -10px;
+                bottom: -10px;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: -15px;
+            width: 30px;
+            height: 30px;
+            background-image: url('../images/ico/plus-pink.png');
+            background-size: contain;
+            background-position: center center;
+            z-index: 2;
+
+            @media screen and (max-width: $bp-MD) {
+                height: 20px;
+                width: 20px;
+                left: -10px;
+                bottom: -10px;
+            }
+        }
+    }
+}

@@ -41,6 +41,18 @@
     }
 }
 
+.btn-secondary {
+    font-size: 16px;
+    padding: 15px 43px;
+    background-color: $color-secondary;
+
+    &:hover {
+        background-color: darken($color-secondary, 2);
+        @include scale(1.02);
+    }
+}
+
+
 .btn-default {
     min-height: 40px;
     background-color: $color-primary;
@@ -75,7 +87,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 30px 60px 20px 70px;
+    padding: 30px 50px 20px 60px;
     align-items: center;
     width: 230px;
     height: 190px;
@@ -92,6 +104,12 @@
         margin-bottom: 10px;
     }
 
+    span{
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
     &:after {
         content: '';
         z-index: -1;
@@ -101,7 +119,7 @@
         left: 0;
         top: 0;
         background: rgb(238, 238, 238);
-        background: linear-gradient(to bottom, #f8f6f7 0%,#ffff 100%);
+        background: linear-gradient(to bottom, #f8f6f7 0%,#ffff 90%);
         transform: skew(-15deg);
     }
 

@@ -1,98 +1,89 @@
-.acompanhamento {
+.condominio {
     padding-bottom: 90px;
 
-    @media screen and (max-width: $bp-MD){
+    @media screen and (max-width: $bp-MD) {
         padding-bottom: 50px;
     }
 
     &__main-header {
         width: 100%;
-        height: 200px;
-        background: linear-gradient(140deg, #f23678 20%, rgba(249, 118, 48, 1) 56%, rgba(253, 180, 46, 1) 70%);
+        height: 430px;
+        background-size: cover;
+        background-position: center;
 
         @media screen and (max-width: $bp-MD) {
-            height: 160px;
+            height: auto;
         }
 
-        .container {
+        &-caption {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
             height: 100%;
+            position: relative;
+            width: 56%;
+            padding-right: 22%;
 
             @media screen and (max-width: $bp-MD) {
-                justify-content: center;
+                width: 100%;
+                padding: 50px 30px;
+                align-items: center;
             }
 
-        }
+            &:after {
+                content: '';
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 120%;
+                height: 100%;
+                background-color: #a75eb6;
+                background: linear-gradient(90deg, #83438f 0%, #9952a7 100%);
+                opacity: .92;
+                transform: skew(-28deg) translateX(-140px);
 
-        .title {
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 18px;
-
-            @media screen and (max-width: $bp-MD) {
-                text-align: center;
-                font-size: 15px;
-            }
-
-
-            span {
-                display: block;
-                font-weight: bold;
-                text-transform: none;
-                font-size: 52px;
-                margin-top: -5px;
-                
                 @media screen and (max-width: $bp-MD) {
-                    line-height: 0.8;
-                    margin-top: 4px;
-                    font-size: 42px;
+                    transform: none !important;
+                }
+            }
+
+            .title {
+                position: relative;
+                z-index: 2;
+                color: #fff;
+                max-width: 400px;
+                font-size: 25px;
+
+                @media screen and (max-width: $bp-MD) {
+                    text-align: center;
+                    font-size: 19px;
                 }
 
-            }
-        }
-    }
-
-    &__avisos {
-        padding-top: 20px;
-
-        &-header {
-            text-transform: uppercase;
-            color: #fff;
-            padding: 22px 27px;
-            font-size: 14px;
-            margin-bottom: 10px;
-            border-radius: 4px;
-            @include transition();
-
-
-            &:hover {
-                @include scale(1.01);
-            }
-
-            &.green {
-                background-color: #b3ce99;
-            }
-
-            &.red {
-                background-color: #e96d6d;
-            }
-        }
-
-        &-body {
-            background-color: #f7f7f7;
-            border-radius: 4px;
-            padding: 19px 27px;
-
-            p {
-                max-width: 800px;
-
-                b {
+                span {
                     display: block;
+                    font-weight: bold;
+                    font-size: 60px;
+                    margin-top: -10px;
+
+                    @media screen and (max-width: $bp-MD) {
+                       font-size: 46px;
+                    }
+                }
+
+                small {
+                    display: block;
+                    font-size: 19px;
+
+                    @media screen and (max-width: $bp-MD) {
+                        font-size: 15px;
+                    }
                 }
             }
         }
     }
+
 
     &__header {
         display: flex;
@@ -122,7 +113,7 @@
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
-                background-color: $color-secondary;
+                background-color: $color-purple;
                 width: 230px;
 
                 @media screen and (max-width: $bp-MD) {
@@ -133,13 +124,11 @@
     }
 
     &__galeria {
-
         &-imagens {
-            display: none;
-            animation: 1s fadeInUp;
+            padding: 0 40px;
 
-            &.active {
-                display: block;
+            @media screen and (max-width: $bp-MD) {
+                padding: 0 28px;
             }
         }
 
@@ -151,26 +140,6 @@
 
             @media screen and (max-width: $bp-MD) {
                 height: 200px;
-            }
-
-            &:after {
-                content: '';
-                position: absolute;
-                top: -15px;
-                right: -15px;
-                width: 30px;
-                height: 30px;
-                background-image: url('../images/ico/plus-pink.png');
-                background-size: contain;
-                background-position: center center;
-                z-index: 2;
-
-                @media screen and (max-width: $bp-MD) {
-                    height: 20px;
-                    width: 20px;
-                    right: -10px;
-                    top: -10px;
-                }
             }
 
             &:before {
@@ -246,38 +215,23 @@
         }
     }
 
-    &__media{
+    &__media {
         height: auto;
 
-        &-sorce{
+        &-sorce {
             width: 100%;
         }
     }
 
-    &__documentos{
-        &-list{
+    &__documentos {
+        &-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
 
-            .btn-skew-gray{
+            .btn-skew-gray {
                 flex-grow: 0;
                 flex-shrink: 0;
-            }
-        }
-    }
-
-    &__login{
-        &-form{
-            .form-control{
-                background-color: #f8f7f7;
-                height: 43px;
-            }
-
-            label{
-                text-transform: uppercase;
-                color: #3b4059;
-                font-size: 15px;
             }
         }
     }
