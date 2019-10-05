@@ -1,8 +1,9 @@
 (function(){
     'use strict';
 
-    const mainImage = $('#galeria-main-img');
 
+    //Home Galeria
+    const mainImage = $('#galeria-main-img');
     $('.galeria__list-item').click( function(){
         const newImgSrc = $(this).attr('data-open');
         $(this).siblings().removeClass('active');
@@ -16,5 +17,17 @@
             mainImage.attr('src', newImgSrc);
             mainImage.fadeIn(300);
         });
+    });
+
+
+    //Acompanhamento galeria
+    $('.acompanhamento__galeria-control').click( function(){
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        const target = $(this).attr('data-toggle');
+        $('.acompanhamento__galeria-imagens').removeClass('active');
+        $(target).addClass('active');
+
     })
 })();
